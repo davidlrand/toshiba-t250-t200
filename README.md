@@ -28,11 +28,27 @@ The boot ROM and CP/M 2.2 BIOS in this repo are **not** Toshiba's stock firmware
 |------|---------|
 | [`rom/`](rom/) | Boot ROM binaries (`t250boot.bin`, `t200boot.bin`, `t250cg.bin` chargen) |
 | [`bios/`](bios/) | CP/M 2.2 BIOS assembly source (`bios64.asm` + library files), recovered from period-original floppies |
-| [`disks/`](disks/) | Sample bootable CP/M 2.2 disk images for both machines (IMD and/or MFI format) |
+| [`disks/T-250/`](disks/T-250/) | Two bootable T-250 CP/M 2.2 disk images (`Toshiba-original-v2.20`, `boot-2.14g`), each in both MFI and HFE formats, gzipped |
 | [`docs/disk-formats.md`](docs/disk-formats.md) | Reference document for all 16 disk formats (8 per machine) — cpmtools `diskdef`, libdsk format definitions, FlashFloppy/GOTEK guidance, BIOS-extracted skew tables |
 | [`docs/mame-usage.md`](docs/mame-usage.md) | Quick-start guide for using these ROMs and disks with MAME (driver at `src/mame/toshiba/t250.cpp` in upstream MAME) |
 
-> **Note**: this repository is being populated incrementally. Some directories may be empty at first commit. Check back for new content.
+> **Note**: this repository is being populated incrementally. T-200 (5.25") bootable disks and BIOS assembly source are still to come — check back for new content.
+
+## Quick start
+
+```sh
+# Get MAME 0.290 or later (driver landed 2026)
+# Drop boot ROMs into MAME's ROM path:
+mkdir -p roms/t250 roms/t200
+cp rom/t250boot.bin roms/t250/
+cp rom/t200boot.bin roms/t200/
+
+# Uncompress one of the T-250 boot disks and run:
+gunzip -k disks/T-250/Toshiba-original-v2.20.mfi.gz
+mame t250 -window -flop1 disks/T-250/Toshiba-original-v2.20.mfi
+```
+
+For more options (serial port, hard disk, real-hardware replay via GOTEK), see [`docs/mame-usage.md`](docs/mame-usage.md).
 
 ## MAME emulation
 
