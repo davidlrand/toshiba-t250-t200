@@ -15,6 +15,12 @@ Bootable CP/M 2.2 disk images.  Files are gzip-compressed for repo size; uncompr
 | [`T-250/newboot.mfi.gz`](T-250/newboot.mfi.gz) / [`.hfe.gz`](T-250/newboot.hfe.gz) | Modern BIOS 2.32 boot disk with modified CCP (path search + archive integration).  Pair with `newbios` in `-flop2`.  See [Boot+BIOS pair](#bootbios-pair-newboot--newbios) below. |
 | [`T-250/newbios.mfi.gz`](T-250/newbios.mfi.gz) / [`.hfe.gz`](T-250/newbios.hfe.gz) | BIOS 2.32 source disk, configured for the 32 MB CDC Finch hard drive.  Sources live in user-area 5 (`B5:`).  See [Boot+BIOS pair](#bootbios-pair-newboot--newbios) below. |
 
+### T-200 (5.25" DSDD, 35-track)
+
+| File | Description |
+|------|-------------|
+| [`T-200/t200-boot-v2.21.mfi.gz`](T-200/t200-boot-v2.21.mfi.gz) / [`.hfe.gz`](T-200/t200-boot-v2.21.hfe.gz) | Stock Toshiba-shipped CP/M BIOS V2.21 boot disk |
+
 Two formats per disk:
 - **`.mfi`** — MAME Floppy Image.  Read AND write inside MAME; suitable for adding files, formatting, etc.
 - **`.hfe`** — HxC Floppy Emulator flux-level format.  Use with GOTEK/FlashFloppy hardware or the HxC Floppy Emulator software.  Read AND write.
@@ -150,6 +156,5 @@ See [`../docs/disk-formats.md`](../docs/disk-formats.md) for the complete list o
 
 ## What's missing
 
-- T-200 (5.25" DSDD) bootable disks — to be added.
 - Source-disk images for the BIOS, debugger, language tools.
 - Hard-disk CHD samples — covered separately in the MAME usage guide; not bundled here.
