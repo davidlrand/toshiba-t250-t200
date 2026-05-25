@@ -156,5 +156,4 @@ See [`../docs/disk-formats.md`](../docs/disk-formats.md) for the complete list o
 
 ## What's missing
 
-- Source-disk images for the BIOS, debugger, language tools.
 - Hard-disk CHD samples — covered separately in the MAME usage guide; not bundled here.
