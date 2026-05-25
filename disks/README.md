@@ -11,6 +11,7 @@ Bootable CP/M 2.2 disk images.  Files are gzip-compressed for repo size; uncompr
 | [`T-250/Toshiba-original-v2.20.mfi.gz`](T-250/Toshiba-original-v2.20.mfi.gz) / [`.hfe.gz`](T-250/Toshiba-original-v2.20.hfe.gz) | Original Toshiba-shipped CP/M 2.20 boot disk |
 | [`T-250/boot-2.14g.mfi.gz`](T-250/boot-2.14g.mfi.gz) / [`.hfe.gz`](T-250/boot-2.14g.hfe.gz) | Earlier BIOS revision 2.14g, with a substantial collection of CP/M utility programs |
 | [`T-250/Toshiba-T250-demo.mfi.gz`](T-250/Toshiba-T250-demo.mfi.gz) / [`.hfe.gz`](T-250/Toshiba-T250-demo.hfe.gz) | Older BIOS revision 2.12a with a simple text-mode demo program that exercises the T-250's graphics capabilities |
+| [`T-250/boot1024-font.mfi.gz`](T-250/boot1024-font.mfi.gz) / [`.hfe.gz`](T-250/boot1024-font.hfe.gz) | Modern BIOS revision 2.32, **1024-byte sector** format.  Includes a collection of font-loading programs (HP41, a sideways font, and others) plus `char.com`, the font editor that demonstrates real-time VPG static-RAM updates on the T-250 video hardware. |
 
 Two formats per disk:
 - **`.mfi`** — MAME Floppy Image.  Read AND write inside MAME; suitable for adding files, formatting, etc.
