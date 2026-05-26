@@ -20,6 +20,7 @@ Bootable CP/M 2.2 disk images.  Files are gzip-compressed for repo size; uncompr
 | File | Description |
 |------|-------------|
 | [`T-200/t200-boot-v2.21.mfi.gz`](T-200/t200-boot-v2.21.mfi.gz) / [`.hfe.gz`](T-200/t200-boot-v2.21.hfe.gz) | Stock Toshiba-shipped CP/M BIOS V2.21 boot disk |
+| [`T-200/trianex-boot-v3.0.mfi.gz`](T-200/trianex-boot-v3.0.mfi.gz) / [`.hfe.gz`](T-200/trianex-boot-v3.0.hfe.gz) | Trianex V3.0 BIOS boot disk.  Trianex was a Canadian reseller of the Toshiba line; their BIOS added hard-drive support via their own interface and protocol (different from the SASI/ACB-4000 path used by other T-200 systems).  Boots cleanly under MAME; the HD formatter does not run because the Trianex disk-controller hardware is not yet emulated.  Trianex ceased operations around August 1985. |
 
 Two formats per disk:
 - **`.mfi`** — MAME Floppy Image.  Read AND write inside MAME; suitable for adding files, formatting, etc.
