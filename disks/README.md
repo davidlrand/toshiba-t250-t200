@@ -20,11 +20,14 @@ Bootable CP/M 2.2 disk images.  Files are gzip-compressed for repo size; uncompr
 | File | Description |
 |------|-------------|
 | [`T-200/t200-boot-v2.21.mfi.gz`](T-200/t200-boot-v2.21.mfi.gz) / [`.hfe.gz`](T-200/t200-boot-v2.21.hfe.gz) | Stock Toshiba-shipped CP/M BIOS V2.21 boot disk |
+| [`T-200/toshiba-v2.21-original-ser-10133.mfi.gz`](T-200/toshiba-v2.21-original-ser-10133.mfi.gz) / [`.imd.gz`](T-200/toshiba-v2.21-original-ser-10133.imd.gz) | Second V2.21 distribution disk, serial 10133.  Same BIOS revision as the entry above with minor content differences. |
+| [`T-200/boot-v2.30a-1024.mfi.gz`](T-200/boot-v2.30a-1024.mfi.gz) / [`.imd.gz`](T-200/boot-v2.30a-1024.imd.gz) | BIOS **V2.30a** boot disk — adds 1024-byte and 512-byte sector support beyond V2.21's 256-byte limit, giving higher-capacity disks (T-200 type 4-7 in the format table). |
 | [`T-200/trianex-boot-v3.0.mfi.gz`](T-200/trianex-boot-v3.0.mfi.gz) / [`.hfe.gz`](T-200/trianex-boot-v3.0.hfe.gz) | Trianex V3.0 BIOS boot disk.  Trianex was a Canadian reseller of the Toshiba line; their BIOS added hard-drive support via their own interface and protocol (different from the SASI/ACB-4000 path used by other T-200 systems).  Boots cleanly under MAME; the HD formatter does not run because the Trianex disk-controller hardware is not yet emulated.  Trianex ceased operations around August 1985. |
 
 Two formats per disk:
 - **`.mfi`** — MAME Floppy Image.  Read AND write inside MAME; suitable for adding files, formatting, etc.
 - **`.hfe`** — HxC Floppy Emulator flux-level format.  Use with GOTEK/FlashFloppy hardware or the HxC Floppy Emulator software.  Read AND write.
+- **`.imd`** — Dave Dunfield's ImageDisk format.  Widely supported by vintage CP/M tooling (cpmtools, libdsk, IMDU).  Some disks (V2.30a, V2.21 ser-10133) ship in `.imd` rather than `.hfe` because their use case is emulation + filesystem inspection rather than Gotek hardware replay.
 
 ## Boot+BIOS pair: `newboot` + `newbios`
 
